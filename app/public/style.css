@@ -34,7 +34,9 @@ transition: 0.2s;
 color: firebrick;
 border-radius: 7px;
 background-color: rgb(247, 205, 211);
+
 }
+
 .button:hover {
     background-color: orangered;
     border: 3px solid lightsalmon;
@@ -84,7 +86,7 @@ background-color:rgb(250, 217, 222);
 }
 .friends-display {
     margin:auto;
-    
+
     width:80%;
     height:35%;
     display:flex;
@@ -120,6 +122,27 @@ text-align: center;
 .inner-div p {
     position:relative;
     margin: 5px;
+}
+
+.sidebar-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin:75px;
+
+}
+.reveal-button {
+    height: 80px;
+    width: 260px;
+    font-size: 25px;
+
+}
+.match-display-area {
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    align-content: center;
 }
 
 
