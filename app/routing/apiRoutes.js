@@ -9,6 +9,7 @@ module.exports = function(app) {
   
     app.post("/api/friendsArray", function(req, res) {
         friendsArray.push(req.body)
+        console.log("added to friends array");
 
         // ask about this:
             res.json(true);
