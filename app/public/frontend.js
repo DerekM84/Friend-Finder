@@ -1,9 +1,9 @@
-console.log("frontend.js served up");
+console.log("frontend.js served up hot");
 
 $(document).ready(function() {
 
 $.get("/api/friendsArray", function(data) {
-console.log("doc rdy, get request to api/friendsArray");
+console.log("doc rdy, sending GET request to api/friendsArray");
 console.log(data);
 
 data.forEach(e => {
