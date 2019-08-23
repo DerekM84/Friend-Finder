@@ -8,5 +8,5 @@ This networking app is the perfect solution for those times when you could use a
 
 Become friends with a celebrity guest, and other users! Make yourself a profile in 6 easy questions and see who you are compatible with.
 
-This is a full stack app, made with Node.Js, express, 
+This is a full stack app, made primarily with Node.js, Express, and Javascript. Additional HTML pages and Flexbox CSS were used as the wireframe tech. 
 
