@@ -33,11 +33,11 @@ $(document).ready(function () {
 
         var newDiv = $("<div>").addClass("friend-div");
         var img = $("<img>").addClass("friend-photo");
-            img.attr("src", $("#photo").val().trim());
+        img.attr("src", $("#photo").val().trim());
 
 
         newDiv.append(img);
-        
+
 
         var confirm = $("<h1>").addClass("confirmation-message").text("Profile Created! Check your Match Now!");
 
@@ -54,11 +54,18 @@ $(document).ready(function () {
             q6: parseInt($("#q6").val()),
         };
         console.log(newFriend);
-        $.post("/api/friendsArray", newFriend)
-            .then(function (data) {
-                console.log("Adding new friend: ", data);
-            });
-    });
+        if (newFriend.q1 == 1 && newFriend.q2 == 1 && newFriend.q3 == 1 && newFriend.q4 == 1 && newFriend.q5 == 1 && newFriend.q6 == 1) {
+
+            console.log("survey values left empty:");
+        }
+        else {
+            $.post("/api/friendsArray", newFriend)
+                .then(function (data) {
+                    console.log("Adding new friend: ", data);
+                });
+        }
+    })
+        ;
 })
 
 $(".reveal-button").on("mouseover", function () {
@@ -87,19 +94,19 @@ $(".reveal-button").on("mouseover", function () {
 
                 console.log("changed bestmatch to: " + JSON.stringify(bestMatch));
             }
-            
-            
+
+
 
             if (e.matchPoints > bestMatch.matchPoints) {
-                    bestMatch = e;
+                bestMatch = e;
                 console.log("bestmatch after points update: " + JSON.stringify(bestMatch.name, bestMatch.matchPoints));
             }
         }
         display(NF, bestMatch);
     })
-        
-        display(NF, bestMatch);
-        function display(NF, bestMatch) {
+
+    display(NF, bestMatch);
+    function display(NF, bestMatch) {
         console.log(NF, bestMatch);
         $(".match-display-area").empty();
         var firstProfile = $("<div>").addClass("friend-div");
@@ -116,7 +123,7 @@ $(".reveal-button").on("mouseover", function () {
         var star = $("<img>").addClass("star").attr("src", "https://www.animatedimages.org/data/media/280/animated-star-image-0061.gif");
         firstProfile.append(imgOne, nameOne);
         secondProfile.append(imgTwo, nameTwo);
-        $(".match-display-area").append(firstProfile,star, secondProfile);
+        $(".match-display-area").append(firstProfile, star, secondProfile);
     }
 
 })
