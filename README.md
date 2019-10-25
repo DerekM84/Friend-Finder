@@ -1,12 +1,13 @@
-#     Fast Friends
+#  Fast Friends
 
+## Demonstrating a more complex base of javascript functionality and incorporating API/HTML routing. 
 ## Deployed to Heroku @ 
 
 (https://fast-ocean-46834.herokuapp.com "Fast Friends Live App")
 
-This networking app is the perfect solution for those times when you could use a reminder to just use an app for everything!
+### This networking app is the perfect solution for those times when you could use a reminder to just use an app for everything! Become friends with a celebrity guest, and other users! Make yourself a profile in 6 easy questions and see who you are compatible with.
 
-Become friends with a celebrity guest, and other users! Make yourself a profile in 6 easy questions and see who you are compatible with.
+## This is a full stack app, made primarily with Node.js, Express, and Javascript. Additional HTML pages and Flexbox CSS were used as the wireframe tech. 
 
-This is a full stack app, made primarily with Node.js, Express, and Javascript. Additional HTML pages and Flexbox CSS were used as the wireframe tech. 
 
+![Screen Capture](./app/public/images/FFSS.png "Screen Capture")
